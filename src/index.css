@@ -1,42 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Junaid Furniture Design System - Warm Earthy Elegant */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Primary Furniture Brand Colors */
+    --background: 35 25% 97%;
+    --foreground: 25 15% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card & Surface Colors */
+    --card: 35 40% 98%;
+    --card-foreground: 25 15% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 35 40% 98%;
+    --popover-foreground: 25 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Brand Identity Colors */
+    --primary: 25 45% 25%;
+    --primary-foreground: 35 40% 98%;
+    --primary-light: 25 35% 35%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Warm Secondary Tones */
+    --secondary: 35 30% 92%;
+    --secondary-foreground: 25 35% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted Warm Tones */
+    --muted: 35 25% 90%;
+    --muted-foreground: 25 20% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent & Luxury Gold */
+    --accent: 45 85% 65%;
+    --accent-foreground: 25 45% 25%;
+    --gold: 45 95% 50%;
 
+    /* Wooden Tones */
+    --wood-light: 35 45% 75%;
+    --wood-medium: 30 40% 55%;
+    --wood-dark: 25 50% 35%;
+
+    /* Status Colors */
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 35 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Interactive Elements */
+    --border: 35 20% 85%;
+    --input: 35 20% 90%;
+    --ring: 45 85% 65%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Elegant Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--accent)));
+    --gradient-warm: linear-gradient(135deg, hsl(var(--wood-light)), hsl(var(--secondary)));
+    --gradient-hero: linear-gradient(135deg, hsl(25 45% 25% / 0.9), hsl(25 35% 35% / 0.7));
+    
+    /* Elegant Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.15);
+    --shadow-warm: 0 8px 25px -8px hsl(var(--wood-medium) / 0.2);
+    --shadow-gold: 0 4px 20px hsl(var(--gold) / 0.3);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +126,57 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+}
+
+@layer base {
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-crimson font-semibold;
+  }
+  
+  .font-crimson { font-family: 'Crimson Text', serif; }
+  .font-inter { font-family: 'Inter', sans-serif; }
+}
+
+@layer components {
+  /* Premium Button Variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--accent))] 
+           text-[hsl(var(--primary))] font-semibold px-8 py-4 rounded-xl
+           hover:shadow-[var(--shadow-gold)] transform hover:scale-105 
+           transition-all duration-300;
+  }
+  
+  .btn-elegant {
+    @apply bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] 
+           font-medium px-6 py-3 rounded-lg hover:bg-[hsl(var(--primary-light))]
+           shadow-[var(--shadow-elegant)] hover:shadow-lg
+           transition-all duration-300;
+  }
+  
+  /* Card Styles */
+  .card-elegant {
+    @apply bg-[hsl(var(--card))] rounded-2xl p-6 
+           shadow-[var(--shadow-warm)] hover:shadow-xl
+           border border-[hsl(var(--border))]
+           transition-all duration-300 hover:transform hover:scale-105;
+  }
+  
+  /* Navigation */
+  .nav-link {
+    @apply text-[hsl(var(--foreground))] font-medium 
+           hover:text-[hsl(var(--gold))] transition-colors duration-300
+           relative after:content-[''] after:absolute after:w-full after:h-0.5 
+           after:bottom-0 after:left-0 after:bg-[hsl(var(--gold))] 
+           after:transform after:scale-x-0 after:transition-transform 
+           after:duration-300 hover:after:scale-x-100;
+  }
+  
+  /* Text Gradients */
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--accent))]
+           bg-clip-text text-transparent;
   }
 }
