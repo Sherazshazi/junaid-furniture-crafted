@@ -1,81 +1,64 @@
 import { useState } from 'react';
 import { Search, Filter } from 'lucide-react';
-import sofaImage from '@/assets/product-sofa.jpg';
-import bedImage from '@/assets/product-bed.jpg';
-import diningImage from '@/assets/product-dining.jpg';
-import chairImage from '@/assets/product-chair.jpg';
-import officeImage from '@/assets/product-office.jpg';
+import shedsImage from '@/assets/product-sheds.jpg';
+import toolsImage from '@/assets/product-tools.jpg';
+import materialsImage from '@/assets/product-materials.jpg';
+import hardwareImage from '@/assets/product-hardware.jpg';
 
 const Products = () => {
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const categories = ['All', 'Sofas', 'Beds', 'Dining Tables', 'Chairs', 'Office Furniture'];
+  const categories = ['All', 'Sheds', 'Tools', 'Building Materials', 'Hardware', 'Safety Equipment'];
 
   const products = [
     {
       id: 1,
-      name: 'Premium Leather Sofa',
-      category: 'Sofas',
-      price: '$2,499',
-      image: sofaImage,
-      description: 'Handcrafted leather sofa with solid wood frame and premium cushioning.'
+      name: 'Garden Storage Shed',
+      category: 'Sheds',
+      price: '$899',
+      image: shedsImage,
+      description: 'Durable wooden shed perfect for garden tools and outdoor storage.'
     },
     {
       id: 2,
-      name: 'Royal King Bed',
-      category: 'Beds',
-      price: '$1,899',
-      image: bedImage,
-      description: 'Elegant wooden bed with carved headboard and premium finish.'
+      name: 'Professional Tool Set',
+      category: 'Tools',
+      price: '$299',
+      image: toolsImage,
+      description: 'Complete set of professional-grade construction tools.'
     },
     {
       id: 3,
-      name: 'Executive Dining Set',
-      category: 'Dining Tables',
-      price: '$3,299',
-      image: diningImage,
-      description: 'Complete dining set with table and 6 upholstered chairs.'
+      name: 'Building Material Bundle',
+      category: 'Building Materials',
+      price: '$599',
+      image: materialsImage,
+      description: 'Quality lumber and construction materials for your project.'
     },
     {
       id: 4,
-      name: 'Executive Office Chair',
-      category: 'Chairs',
-      price: '$799',
-      image: chairImage,
-      description: 'Ergonomic office chair with premium leather and wooden accents.'
+      name: 'Hardware Fasteners Kit',
+      category: 'Hardware',
+      price: '$89',
+      image: hardwareImage,
+      description: 'Complete collection of screws, bolts, and fastening hardware.'
     },
     {
       id: 5,
-      name: 'Executive Office Suite',
-      category: 'Office Furniture',
-      price: '$4,999',
-      image: officeImage,
-      description: 'Complete office furniture set with desk, chair, and storage.'
+      name: 'Premium Workshop Shed',
+      category: 'Sheds',
+      price: '$1,299',
+      image: shedsImage,
+      description: 'Large workshop shed with windows and electrical options.'
     },
     {
       id: 6,
-      name: 'Classic Sectional Sofa',
-      category: 'Sofas',
-      price: '$3,199',
-      image: sofaImage,
-      description: 'Spacious sectional sofa perfect for large living rooms.'
-    },
-    {
-      id: 7,
-      name: 'Master Bedroom Set',
-      category: 'Beds',
-      price: '$2,799',
-      image: bedImage,
-      description: 'Complete bedroom set with bed, nightstands, and dresser.'
-    },
-    {
-      id: 8,
-      name: 'Formal Dining Table',
-      category: 'Dining Tables',
-      price: '$1,999',
-      image: diningImage,
-      description: 'Elegant dining table crafted from premium hardwood.'
+      name: 'Power Tools Collection',
+      category: 'Tools',
+      price: '$799',
+      image: toolsImage,
+      description: 'Professional power tools for serious construction work.'
     },
   ];
 
@@ -91,11 +74,11 @@ const Products = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-crimson font-bold text-foreground mb-6">
+          <h1 className="text-5xl md:text-6xl font-roboto-slab font-bold text-foreground mb-6">
             Our Products
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Discover our complete collection of premium furniture crafted with excellence
+            Quality hardware, tools, and building materials for every project
           </p>
         </div>
 

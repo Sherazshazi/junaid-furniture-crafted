@@ -19,7 +19,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'crimson': ['Crimson Text', 'serif'],
+				'roboto-slab': ['Roboto Slab', 'serif'],
 				'inter': ['Inter', 'sans-serif'],
 			},
 			colors: {
@@ -30,8 +30,7 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))',
-					light: 'hsl(var(--primary-light))'
+					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -57,12 +56,10 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				gold: 'hsl(var(--gold))',
-				wood: {
-					light: 'hsl(var(--wood-light))',
-					medium: 'hsl(var(--wood-medium))',
-					dark: 'hsl(var(--wood-dark))'
-				},
+				'steel-blue': 'hsl(var(--steel-blue))',
+				'forest-green': 'hsl(var(--forest-green))',
+				'slate-gray': 'hsl(var(--slate-gray))',
+				'construction-orange': 'hsl(var(--construction-orange))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

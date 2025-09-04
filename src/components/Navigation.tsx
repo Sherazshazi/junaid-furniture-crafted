@@ -9,9 +9,9 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },
+    { name: 'About', path: '/about' },
     { name: 'Products', path: '/products' },
-    { name: 'Gallery', path: '/gallery' },
+    { name: 'Services', path: '/services' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -23,7 +23,11 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <img src={logo} alt="Junaid Furniture" className="h-12 w-auto" />
+            <img src={logo} alt="Ukasha Hardware" className="h-12 w-auto" />
+            <div>
+              <h1 className="text-xl font-roboto-slab font-bold text-foreground">Ukasha Hardware</h1>
+              <p className="text-xs text-muted-foreground">ZRK</p>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -33,7 +37,7 @@ const Navigation = () => {
                 key={item.name}
                 to={item.path}
                 className={`nav-link ${
-                  isActive(item.path) ? 'text-gold' : ''
+                  isActive(item.path) ? 'text-steel-blue' : ''
                 }`}
               >
                 {item.name}
@@ -45,7 +49,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-gold focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-steel-blue focus:outline-none"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -62,8 +66,8 @@ const Navigation = () => {
                   to={item.path}
                   className={`block px-3 py-2 text-base font-medium transition-colors duration-300 ${
                     isActive(item.path)
-                      ? 'text-gold'
-                      : 'text-foreground hover:text-gold'
+                      ? 'text-steel-blue'
+                      : 'text-foreground hover:text-steel-blue'
                   }`}
                   onClick={() => setIsOpen(false)}
                 >

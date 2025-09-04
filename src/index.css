@@ -1,68 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Junaid Furniture Design System - Warm Earthy Elegant */
+/* Ukasha Hardware Design System - Professional Blue/Gray/Green */
 
 @layer base {
   :root {
-    /* Primary Furniture Brand Colors */
-    --background: 35 25% 97%;
-    --foreground: 25 15% 15%;
+    /* Professional Hardware Store Colors */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
 
     /* Card & Surface Colors */
-    --card: 35 40% 98%;
-    --card-foreground: 25 15% 15%;
+    --card: 210 15% 96%;
+    --card-foreground: 215 25% 15%;
 
-    --popover: 35 40% 98%;
-    --popover-foreground: 25 15% 15%;
+    --popover: 210 15% 96%;
+    --popover-foreground: 215 25% 15%;
 
     /* Brand Identity Colors */
-    --primary: 25 45% 25%;
-    --primary-foreground: 35 40% 98%;
-    --primary-light: 25 35% 35%;
+    --primary: 215 80% 35%;
+    --primary-foreground: 210 20% 98%;
 
-    /* Warm Secondary Tones */
-    --secondary: 35 30% 92%;
-    --secondary-foreground: 25 35% 25%;
+    /* Professional Secondary Tones */
+    --secondary: 210 15% 92%;
+    --secondary-foreground: 215 25% 15%;
 
-    /* Muted Warm Tones */
-    --muted: 35 25% 90%;
-    --muted-foreground: 25 20% 45%;
+    /* Muted Professional Tones */
+    --muted: 210 15% 92%;
+    --muted-foreground: 215 15% 45%;
 
-    /* Accent & Luxury Gold */
-    --accent: 45 85% 65%;
-    --accent-foreground: 25 45% 25%;
-    --gold: 45 95% 50%;
+    /* Accent Green & Professional Colors */
+    --accent: 142 70% 45%;
+    --accent-foreground: 210 20% 98%;
 
-    /* Wooden Tones */
-    --wood-light: 35 45% 75%;
-    --wood-medium: 30 40% 55%;
-    --wood-dark: 25 50% 35%;
+    /* Hardware Brand Colors */
+    --steel-blue: 215 80% 35%;
+    --forest-green: 142 70% 45%;
+    --slate-gray: 215 15% 65%;
+    --construction-orange: 25 95% 55%;
 
     /* Status Colors */
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 35 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
 
     /* Interactive Elements */
-    --border: 35 20% 85%;
-    --input: 35 20% 90%;
-    --ring: 45 85% 65%;
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 215 80% 35%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Elegant Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
-    --gradient-gold: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--accent)));
-    --gradient-warm: linear-gradient(135deg, hsl(var(--wood-light)), hsl(var(--secondary)));
-    --gradient-hero: linear-gradient(135deg, hsl(25 45% 25% / 0.9), hsl(25 35% 35% / 0.7));
+    /* Professional Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-steel: linear-gradient(135deg, hsl(var(--steel-blue)), hsl(var(--slate-gray)));
+    --gradient-hero: linear-gradient(135deg, hsl(215 80% 35% / 0.9), hsl(215 60% 45% / 0.7));
     
-    /* Elegant Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.15);
-    --shadow-warm: 0 8px 25px -8px hsl(var(--wood-medium) / 0.2);
-    --shadow-gold: 0 4px 20px hsl(var(--gold) / 0.3);
+    /* Professional Shadows */
+    --shadow-professional: 0 10px 40px -12px hsl(var(--primary) / 0.25);
+    --shadow-steel: 0 8px 32px -8px hsl(var(--steel-blue) / 0.3);
 
     --sidebar-background: 0 0% 98%;
 
@@ -133,33 +130,33 @@
 @layer base {
   /* Typography */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-crimson font-semibold;
+    @apply font-roboto-slab font-semibold;
   }
   
-  .font-crimson { font-family: 'Crimson Text', serif; }
+  .font-roboto-slab { font-family: 'Roboto Slab', serif; }
   .font-inter { font-family: 'Inter', sans-serif; }
 }
 
 @layer components {
-  /* Premium Button Variants */
+  /* Professional Button Variants */
   .btn-hero {
-    @apply bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--accent))] 
-           text-[hsl(var(--primary))] font-semibold px-8 py-4 rounded-xl
-           hover:shadow-[var(--shadow-gold)] transform hover:scale-105 
+    @apply bg-gradient-to-r from-[hsl(var(--steel-blue))] to-[hsl(var(--forest-green))] 
+           text-white font-semibold px-8 py-4 rounded-lg
+           hover:shadow-[var(--shadow-steel)] transform hover:scale-105 
            transition-all duration-300;
   }
   
-  .btn-elegant {
+  .btn-professional {
     @apply bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] 
-           font-medium px-6 py-3 rounded-lg hover:bg-[hsl(var(--primary-light))]
-           shadow-[var(--shadow-elegant)] hover:shadow-lg
+           font-medium px-6 py-3 rounded-lg hover:bg-[hsl(var(--primary))] hover:opacity-90
+           shadow-[var(--shadow-professional)] hover:shadow-lg
            transition-all duration-300;
   }
   
   /* Card Styles */
-  .card-elegant {
-    @apply bg-[hsl(var(--card))] rounded-2xl p-6 
-           shadow-[var(--shadow-warm)] hover:shadow-xl
+  .card-professional {
+    @apply bg-[hsl(var(--card))] rounded-xl p-6 
+           shadow-[var(--shadow-professional)] hover:shadow-xl
            border border-[hsl(var(--border))]
            transition-all duration-300 hover:transform hover:scale-105;
   }
@@ -167,16 +164,16 @@
   /* Navigation */
   .nav-link {
     @apply text-[hsl(var(--foreground))] font-medium 
-           hover:text-[hsl(var(--gold))] transition-colors duration-300
+           hover:text-[hsl(var(--steel-blue))] transition-colors duration-300
            relative after:content-[''] after:absolute after:w-full after:h-0.5 
-           after:bottom-0 after:left-0 after:bg-[hsl(var(--gold))] 
+           after:bottom-0 after:left-0 after:bg-[hsl(var(--steel-blue))] 
            after:transform after:scale-x-0 after:transition-transform 
            after:duration-300 hover:after:scale-x-100;
   }
   
   /* Text Gradients */
-  .text-gradient-gold {
-    @apply bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--accent))]
+  .text-gradient-steel {
+    @apply bg-gradient-to-r from-[hsl(var(--steel-blue))] to-[hsl(var(--forest-green))]
            bg-clip-text text-transparent;
   }
 }

@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Shield, Clock } from 'lucide-react';
-import heroImage from '@/assets/hero-furniture.jpg';
-import sofaImage from '@/assets/product-sofa.jpg';
-import bedImage from '@/assets/product-bed.jpg';
-import diningImage from '@/assets/product-dining.jpg';
+import heroImage from '@/assets/hero-hardware.jpg';
+import shedsImage from '@/assets/product-sheds.jpg';
+import toolsImage from '@/assets/product-tools.jpg';
+import materialsImage from '@/assets/product-materials.jpg';
 
 const Home = () => {
   return (
@@ -12,25 +12,25 @@ const Home = () => {
       <section 
         className="relative h-screen flex items-center justify-center text-center text-white"
         style={{
-          backgroundImage: `linear-gradient(135deg, hsl(25 45% 25% / 0.8), hsl(25 35% 35% / 0.6)), url(${heroImage})`,
+          backgroundImage: `linear-gradient(135deg, hsl(215 80% 35% / 0.9), hsl(215 60% 45% / 0.7)), url(${heroImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
         }}
       >
         <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-7xl font-crimson font-bold mb-6 leading-tight">
-            Crafting Comfort <br />
-            <span className="text-gradient-gold">with Elegance</span>
+          <h1 className="text-5xl md:text-7xl font-roboto-slab font-bold mb-6 leading-tight">
+            Strong Solutions <br />
+            <span className="text-gradient-steel">for Every Build</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-white/90 font-inter">
-            Discover premium furniture that transforms your space into a masterpiece
+            Your trusted supplier of sheds, construction materials, and hardware tools
           </p>
           <Link 
             to="/products" 
             className="btn-hero inline-flex items-center gap-2 text-lg"
           >
-            Explore Collection <ArrowRight size={24} />
+            Shop Hardware <ArrowRight size={24} />
           </Link>
         </div>
       </section>
@@ -39,42 +39,42 @@ const Home = () => {
       <section className="py-20 bg-secondary/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-crimson font-bold text-foreground mb-4">
-              Why Choose Junaid Furniture?
+            <h2 className="text-4xl md:text-5xl font-roboto-slab font-bold text-foreground mb-4">
+              Why Choose Ukasha Hardware?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Experience the perfect blend of traditional craftsmanship and modern design
+              Trusted supplier with quality products, professional service, and reliable support
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="card-elegant text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-gold to-accent rounded-full flex items-center justify-center mx-auto mb-6">
-                <Star className="text-primary" size={32} />
+            <div className="card-professional text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-steel-blue to-forest-green rounded-full flex items-center justify-center mx-auto mb-6">
+                <Star className="text-white" size={32} />
               </div>
-              <h3 className="text-2xl font-crimson font-semibold mb-4">Premium Quality</h3>
+              <h3 className="text-2xl font-roboto-slab font-semibold mb-4">Quality Products</h3>
               <p className="text-muted-foreground">
-                Handcrafted furniture using the finest materials and traditional techniques passed down through generations.
+                Premium construction materials, tools, and hardware from trusted brands, ensuring durability and reliability.
               </p>
             </div>
 
-            <div className="card-elegant text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-gold to-accent rounded-full flex items-center justify-center mx-auto mb-6">
-                <Shield className="text-primary" size={32} />
+            <div className="card-professional text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-steel-blue to-forest-green rounded-full flex items-center justify-center mx-auto mb-6">
+                <Shield className="text-white" size={32} />
               </div>
-              <h3 className="text-2xl font-crimson font-semibold mb-4">Lifetime Warranty</h3>
+              <h3 className="text-2xl font-roboto-slab font-semibold mb-4">Trusted Service</h3>
               <p className="text-muted-foreground">
-                We stand behind our craftsmanship with comprehensive warranty coverage and exceptional after-sales service.
+                Professional delivery, installation services, and comprehensive warranty coverage with ongoing support.
               </p>
             </div>
 
-            <div className="card-elegant text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-gold to-accent rounded-full flex items-center justify-center mx-auto mb-6">
-                <Clock className="text-primary" size={32} />
+            <div className="card-professional text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-steel-blue to-forest-green rounded-full flex items-center justify-center mx-auto mb-6">
+                <Clock className="text-white" size={32} />
               </div>
-              <h3 className="text-2xl font-crimson font-semibold mb-4">Timeless Design</h3>
+              <h3 className="text-2xl font-roboto-slab font-semibold mb-4">Quick Delivery</h3>
               <p className="text-muted-foreground">
-                Classic designs that never go out of style, ensuring your investment remains beautiful for decades.
+                Fast, reliable delivery service to get your projects moving. Same-day pickup available for urgent needs.
               </p>
             </div>
           </div>
@@ -85,68 +85,68 @@ const Home = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-crimson font-bold text-foreground mb-4">
-              Featured Collections
+            <h2 className="text-4xl md:text-5xl font-roboto-slab font-bold text-foreground mb-4">
+              Featured Categories
             </h2>
             <p className="text-xl text-muted-foreground">
-              Explore our most popular furniture categories
+              Explore our comprehensive range of hardware and construction supplies
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <Link to="/products" className="group">
-              <div className="card-elegant overflow-hidden">
+              <div className="card-professional overflow-hidden">
                 <div className="aspect-square overflow-hidden mb-6">
                   <img 
-                    src={sofaImage} 
-                    alt="Premium Sofas"
+                    src={shedsImage} 
+                    alt="Garden Sheds"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <h3 className="text-2xl font-crimson font-semibold mb-2">Premium Sofas</h3>
+                <h3 className="text-2xl font-roboto-slab font-semibold mb-2">Garden Sheds</h3>
                 <p className="text-muted-foreground mb-4">
-                  Luxurious seating solutions crafted for ultimate comfort
+                  Durable storage solutions for your outdoor space and tools
                 </p>
-                <span className="text-gold font-medium inline-flex items-center gap-2">
-                  View Collection <ArrowRight size={16} />
+                <span className="text-steel-blue font-medium inline-flex items-center gap-2">
+                  View Sheds <ArrowRight size={16} />
                 </span>
               </div>
             </Link>
 
             <Link to="/products" className="group">
-              <div className="card-elegant overflow-hidden">
+              <div className="card-professional overflow-hidden">
                 <div className="aspect-square overflow-hidden mb-6">
                   <img 
-                    src={bedImage} 
-                    alt="Elegant Beds"
+                    src={toolsImage} 
+                    alt="Construction Tools"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <h3 className="text-2xl font-crimson font-semibold mb-2">Elegant Beds</h3>
+                <h3 className="text-2xl font-roboto-slab font-semibold mb-2">Construction Tools</h3>
                 <p className="text-muted-foreground mb-4">
-                  Sleep in style with our handcrafted bedroom furniture
+                  Professional-grade tools for every construction project
                 </p>
-                <span className="text-gold font-medium inline-flex items-center gap-2">
-                  View Collection <ArrowRight size={16} />
+                <span className="text-steel-blue font-medium inline-flex items-center gap-2">
+                  View Tools <ArrowRight size={16} />
                 </span>
               </div>
             </Link>
 
             <Link to="/products" className="group">
-              <div className="card-elegant overflow-hidden">
+              <div className="card-professional overflow-hidden">
                 <div className="aspect-square overflow-hidden mb-6">
                   <img 
-                    src={diningImage} 
-                    alt="Dining Sets"
+                    src={materialsImage} 
+                    alt="Building Materials"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <h3 className="text-2xl font-crimson font-semibold mb-2">Dining Sets</h3>
+                <h3 className="text-2xl font-roboto-slab font-semibold mb-2">Building Materials</h3>
                 <p className="text-muted-foreground mb-4">
-                  Gather in elegance with our exquisite dining collections
+                  Quality lumber, cement, and construction materials
                 </p>
-                <span className="text-gold font-medium inline-flex items-center gap-2">
-                  View Collection <ArrowRight size={16} />
+                <span className="text-steel-blue font-medium inline-flex items-center gap-2">
+                  View Materials <ArrowRight size={16} />
                 </span>
               </div>
             </Link>
@@ -157,24 +157,24 @@ const Home = () => {
       {/* CTA Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-4xl md:text-5xl font-crimson font-bold mb-6">
-            Ready to Transform Your Space?
+          <h2 className="text-4xl md:text-5xl font-roboto-slab font-bold mb-6">
+            Ready to Start Your Project?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Visit our showroom or browse our complete collection online
+            Visit our hardware store or browse our complete catalog online
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/products" 
-              className="bg-gold hover:bg-accent text-primary font-semibold px-8 py-4 rounded-xl hover:shadow-lg transition-all duration-300"
+              className="bg-forest-green hover:bg-forest-green/90 text-white font-semibold px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300"
             >
-              Shop Now
+              Shop Hardware
             </Link>
             <Link 
               to="/contact" 
-              className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold px-8 py-4 rounded-xl transition-all duration-300"
+              className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold px-8 py-4 rounded-lg transition-all duration-300"
             >
-              Visit Showroom
+              Visit Store
             </Link>
           </div>
         </div>
